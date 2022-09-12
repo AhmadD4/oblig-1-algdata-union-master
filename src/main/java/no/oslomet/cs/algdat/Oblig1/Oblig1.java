@@ -9,11 +9,27 @@ public class Oblig1 {
 
     ///// Oppgave 1 //////////////////////////////////////
     public static int maks(int[] a) {
-        throw new UnsupportedOperationException();
+        for (int i=0; i<a.length-1;i++){
+            if (a[i] > a[i+1]){
+                int bytt = a[i];
+                a[i]=a[i+1];
+                a[i+1]=bytt;
+            }
+        }
+        return a[a.length-1];
     }
 
     public static int ombyttinger(int[] a) {
-        throw new UnsupportedOperationException();
+        int antallOmbytt = 0;
+        for (int i=0; i<a.length-1;i++){
+            if (a[i] > a[i+1]){
+                int bytt = a[i];
+                a[i]=a[i+1];
+                a[i+1]=bytt;
+                antallOmbytt = antallOmbytt +1;
+            }
+        }
+        return antallOmbytt;
     }
 
     ///// Oppgave 2 //////////////////////////////////////
